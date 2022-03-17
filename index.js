@@ -1,7 +1,14 @@
-const puppeteer = require('puppeteer');
-
 //config contains the script configuration constants, to scrap another page change the config file in url:path
 var config = require('./config.json');
+
+
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+puppeteer.use(StealthPlugin());
+
+
+
+
 
 
 
