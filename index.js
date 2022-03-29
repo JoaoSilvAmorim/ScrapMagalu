@@ -1,16 +1,8 @@
 //config contains the script configuration constants, to scrap another page change the config file in url:path
 var config = require('./config.json');
-
-
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 puppeteer.use(StealthPlugin());
-
-
-
-
-
-
 
 async function scrap(){
     //setting pp, headless: false displays chromium 
@@ -41,9 +33,6 @@ async function scrap(){
     //contains the list of selected items and schema
     return {'listData': data.listData, 'schema': data.schema}
 }
-
-
-
 //running scrap and organizing the information
 async function run(){
   let data = await scrap()
